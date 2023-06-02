@@ -24,11 +24,17 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     healthScore : {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     analyzedInstructions:{
       type : DataTypes.TEXT,
+      allowNull: false,
     },
+    createdDB: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    }
     
   },{
     timestamps: false

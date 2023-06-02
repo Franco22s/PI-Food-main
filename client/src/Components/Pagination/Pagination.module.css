@@ -1,0 +1,11 @@
+.uele{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+ .lis {
+    list-style:none;
+ }

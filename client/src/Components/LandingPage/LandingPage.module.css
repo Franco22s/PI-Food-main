@@ -1,0 +1,30 @@
+.background{
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw; 
+    background-image: url('https://img.freepik.com/foto-gratis/tabla-picar-rodeada-verduras-huevos-granos-arroz-escritorio_23-2148062361.jpg?w=1380&t=st=1685313578~exp=1685314178~hmac=f929438137d83fbc5cc61f126189540dc9177996a83c4801a971c82b547af704');
+    background-size: cover;
+}
+
+.welcome{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    
+ 
+}
+
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh; 
+  }
+
+
+  .home{
+    background-color:red;
+  }
+  

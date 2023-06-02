@@ -1,10 +1,8 @@
 require('dotenv').config();
 const {YOUR_API_KEY} = process.env;
-const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true`;
+const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=90`;
 const axios = require('axios');
 const {Recipe, Diet} = require('../db')
-const { Op } = require("sequelize");
-const Diets = require('../models/Diets');
 
 const getApiInfo = async () => {
       const apiUrl = await axios.get(URL);
@@ -46,7 +44,7 @@ try {
       healthScore: recipe.healthScore,
       image: recipe.image,
       analyzedInstructions: recipe.analyzedInstructions,
-      diets: recipe.diets?.map((diet) => diet.name),
+      diets: recipe.diets?.map((diet) => diet.name).join(', '),
     };
   });
 
@@ -115,95 +113,7 @@ const getRecipeById = async (req, res) =>{
 
 
 
-
-// const postRecipes = async (req, res) =>{
-//     try {
-//         const { name, image, summary, healthScore, analyzedInstructions } = req.body;
-
-//         let recipeCreated = await Recipe.create ({
-//             name,
-//             image,
-//             summary,
-//             healthScore,
-//             analyzedInstructions,
-//         })  
-//         let dietsDb = await Diet.findAll({
-//             where: { name }
-//         }) 
-//         recipeCreated.addDiet(dietsDb)
-//         res.status(200).send('Receta creada con exito')     
-
-//     } catch (error) {
-//         res.status(400).json({error: error.message}) 
-//     }
-// };
-
-// let createRecipe = async (name, summary, image, healthScore, analyzedInstructions, diets) => {
-//     let [newRecipe, created] = await Recipe.findOrCreate({
-//       where: {
-//         title: {
-//           [Op.iLike]: `%${name}`,
-//         },
-//       },
-//       defaults: {
-//         name,
-//         summary,
-//         image,
-//         healthScore,
-//         analyzedInstructions,
-//       },
-//     });
-//     if (!created) {
-//       throw new Error("La receta ya existe en la base de datos");
-//     }
-//     let dietByBd = await Diets.findAll({
-//       where: {
-//         diets: diets,
-//       },
-//     });
-//     await newRecipe.addDiets(dietByBd);
-//     return newRecipe;
-//   };
-
-
-
-
-
-
-// const postRecipes = async (req, res) => {
-//   const { name,summary,healthScore,analyzedInstructions,image } = req.body;
-
-//   if (!name || !summary) throw new Error('The "Name" or "Summary" data was not received correctly...');
-//   else {
-//     try {
-//       const recipe = await Recipe.findOne({
-//        where: {
-//           name
-//        }
-//       });
-//       if(recipe){
-//         throw new Error('receta ya creada');
-//       }
-//       const newRecipe = await Recipe.create({
-//         name,
-//         image,
-//         summary,
-//         healthScore,
-//         analyzedInstructions,
-//       })
-//        res.status(200).json(newRecipe)
-//     } catch (error) {
-//       res.status(404).send(error);
-
-//     }
-
-//   }
-
-// };
-
-
-
-const createRecipe = async(name, summary, healthScore, analyzedInstructions, dietsID, image) =>{
+const createRecipe = async(name, summary, healthScore, analyzedInstructions, diets, image) =>{
     
  
   
@@ -215,7 +125,7 @@ const createRecipe = async(name, summary, healthScore, analyzedInstructions, die
       image
   })
 
-  await newRecipe.setDiets(dietsID);
+  await newRecipe.setDiets(diets);
 
   const createdRecipe = await Recipe.findByPk(newRecipe.id, {
       include: {
@@ -232,13 +142,13 @@ const createRecipe = async(name, summary, healthScore, analyzedInstructions, die
 
 
 const postRecipes = async (req, res) => {
-  const {name, summary, healthScore, analyzedInstructions, dietsID, image} = req.body;
-  if (!name || !summary  || !image || !dietsID){
+  const {name, summary, healthScore, analyzedInstructions, diets, image} = req.body;
+  if (!name || !summary  || !image || !diets){
       throw new Error('MANDA TODOS LOS PARAMETROS!');
   }
   
   try {
-      const newRecipe = await createRecipe(name, summary, healthScore, analyzedInstructions, dietsID, image)
+      const newRecipe = await createRecipe(name, summary, healthScore, analyzedInstructions, diets, image)
       console.log('se posteo la receta');
       return res.status(200).json(newRecipe);
   }
@@ -258,24 +168,3 @@ module.exports = {
 };
 
 
-
-// {
-//   "name":"francssus",
-//   "image":"franscussss",
-//   "summary":"receta satipica del gran francus",
-//   "healthScore":10,
-//   "analyzedInstructions":"se cocisana a fuego lento el francus",
-//   "dietsID"
-//   }
-
-
-
-
-// {
-//   "dietsID": "02bce342-61bd-4d42-a0dd-fa48650b0d34",
-//   "name": "gluten free"
-// },
-// {
-//   "dietsID": "4b2df53f-d770-4e1c-8cb5-a0a4ad38a848",
-//   "name": "dairy free"
-// },

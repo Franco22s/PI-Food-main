@@ -1,0 +1,76 @@
+
+
+.bigContainer {
+    display: grid;
+    grid-template-columns: 10px repeat(2, 1fr) 10px;
+    grid-template-rows: 10px 1fr 10px;
+    grid-column-gap: 3px;
+    grid-row-gap: 0px;
+    height: 15rem;
+    width: 30rem;
+    margin: 30px;
+    margin-right: 20px;
+  }
+
+    .body { grid-area: 1 / 1 / 4 / 5; }
+    .img { grid-area: 2 / 2 / 3 / 3; }
+    .specs { grid-area: 2 / 3 / 3 / 4; }
+
+
+
+
+.body{
+    background-color: orangered;
+    border-radius: 5%;
+    border: 5px solid orangered;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.img {
+  overflow: hidden;
+  position: relative;
+}
+
+.img:hover .imagenes {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.imagenes {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+.specs {
+    color: azure;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hdos{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: small;
+}

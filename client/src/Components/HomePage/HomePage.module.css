@@ -1,0 +1,34 @@
+.fondo {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  background-image: url('../../assets/b28c9bc1-e84d-4c16-afc6-468e787c6de8.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  }
+  
+.head { grid-area: 1 / 1 / 2 / 9; }
+  
+.lateral { grid-area: 2 / 2 / 13 / 1; }
+
+.body { grid-area: 2 / 2 / 13 / 9; }
+
+
+
+.head {
+  background-color: aqua;
+}
+
+.lateral {
+  background-color: red;
+}
+
+
+
+/* .body {
+  background-color: violet;
+} */
+
