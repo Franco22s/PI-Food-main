@@ -1,9 +1,65 @@
-.selectContainer{
-    /* background-color: rgba(190, 189, 174, 0.911); */
+/* Lateral.module.css */
+
+.selectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(143, 12, 38, 0.952);
     margin-left: 20px;
     margin-top: 30px;
-    padding: 6px;
+    padding: 16px;
     border: 2px solid rgb(168, 168, 150);
     border-radius: 10px;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 360px;
+  }
+  
+  .filterList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .filterItem {
+    margin-bottom: 12px;
+  }
+  
+  .filterTitle {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 16px;
+  }
+  
+  .filterTitle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .filterSelect {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  option {
+    font-size: 14px;
+    color: #333;
+  }
+  

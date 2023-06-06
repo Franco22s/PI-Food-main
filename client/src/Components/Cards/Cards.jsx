@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from '../Card/Card';
 import style from './Cards.module.css'
 import * as actions from '../../Redux/actions';
+import Loading from '../Loading/Loading';
 
 function Cards() {
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ function Cards() {
         />
       ))
       ) : (
-        <p>No se encontraron recetas</p>
+        <Loading/>
       )}
     </div>
   );

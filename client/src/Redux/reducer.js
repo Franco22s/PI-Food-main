@@ -108,10 +108,9 @@ const reducer = (state= initialState, {type, payload}) => {
                         filteredRecipes: sortedRecipes
                     };
 
-        case POST_RECIPES: 
-            return{
-                ...state};
-
+                    case POST_RECIPES: 
+                    return{
+                        ...state};
 
 
         case SET_CURRENT_PAGE:
@@ -130,3 +129,11 @@ const reducer = (state= initialState, {type, payload}) => {
 
 
 export default reducer; 
+
+
+
+
+
+
+
+

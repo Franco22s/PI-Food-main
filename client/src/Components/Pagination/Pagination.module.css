@@ -1,42 +1,45 @@
 .uele {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  
-  .lis {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-right: 5px;
-  }
-  
-  .lis button {
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: #005800;
-    color: white;
-    cursor: pointer;
-    padding: 4px 12px;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .lis button:hover {
-    background-color: #004500;
-  }
-  
-  .lis button:first-child,
-  .lis button:last-child {
-    background-color: green;
-  }
-  
-  .lis button:first-child:hover,
-  .lis button:last-child:hover {
-    background-color: #286428;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lis {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 5px;
+}
+
+.lis button {
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #005800;
+  color: white;
+  cursor: pointer;
+  padding: 4px 12px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.lis button:hover {
+  background-color: #004500;
+}
+
+.lis button:first-of-type,
+.lis button:last-of-type {
+  background-color: green;
+}
+
+.lis button:first-of-type:hover,
+.lis button:last-of-type:hover {
+  background-color: #286428;
+}
+
+.lis button.activePage {
+  background-color: #235a23;
+}

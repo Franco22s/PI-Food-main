@@ -1,8 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../../Redux/actions'
-import style from './Pagination.module.css'
-
+import * as actions from '../../Redux/actions';
+import style from './Pagination.module.css';
 
 const Pagination = () => {
   const dispatch = useDispatch();
@@ -12,7 +11,7 @@ const Pagination = () => {
   const currentPage = useSelector((state) => state.currentPage);
 
   const handleClick = (page) => {
-    dispatch(actions.setCurrentPage(page)); 
+    dispatch(actions.setCurrentPage(page));
   };
 
   const handlePrevious = () => {
@@ -38,7 +37,12 @@ const Pagination = () => {
         </li>
         {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
           <li className={style.lis} key={page}>
-            <button onClick={() => handleClick(page)}>{page}</button>
+            <button
+              onClick={() => handleClick(page)}
+              className={currentPage === page ? style.activePage : ''}
+            >
+              {page}
+            </button>
           </li>
         ))}
         <li className={style.lis}>

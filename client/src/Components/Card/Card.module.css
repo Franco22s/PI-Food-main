@@ -6,8 +6,7 @@
   grid-row-gap: 0px;
   height: 15rem;
   width: 30rem;
-  margin: 25px;
-  margin-right: 20px;
+  margin: 20px;
 }
 
 .body {
@@ -23,7 +22,7 @@
 }
 
 .body {
-  background-color: rgba(163, 163, 149, 0.7);
+  background-color: rgba(233, 231, 217, 0.479);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -81,6 +80,7 @@
 
 .specs:hover {
   transform: scale(1.05);
+  background-color: rgb(43, 102, 41);
 }
 
 .hdos {

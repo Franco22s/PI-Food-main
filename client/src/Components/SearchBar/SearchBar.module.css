@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between; 
-  background-color: rgba(143, 12, 38, 0.952);
+  background-color: rgba(143, 12, 38, 0.979);
   
 }
 
@@ -34,7 +34,7 @@
 
 .searchInput {
     width: 500px;
-    padding: 7px;
+    padding: 9px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -46,7 +46,7 @@
   
   .boton {
    
-    font-size: 16px;
+    font-size: 17px;
     border: none;
     border-radius: 5px;
     background-color: green;
@@ -64,7 +64,7 @@
   
   
 .create {
-  font-size: 14px; 
+  font-size: 18px; 
   border: none;
   border-radius: 5px;
   background-color: beige; 
@@ -88,7 +88,7 @@
   }
   
   .recipes {
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     background-color: #008000;

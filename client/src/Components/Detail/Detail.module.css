@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.detailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(236, 236, 205);
+    min-height: 100vh;
+  }
+  
+  .leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    max-width: 50%; 
+    background-color: rgb(236, 236, 205);
+    height: 100%;
+  }
+  
+  
+  .imageContainer {
+    width: 550px;
+    height: 550px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px;
+  }
+  
+  .recipeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .recipeImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .recipeDetails {
+    text-align: left;
+  }
+  
+  .recipeTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgba(143, 12, 38, 0.952);
+  }
+  
+  .recipeDetail {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .recipesummary {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .recipeInstructions {
+    margin-bottom: 20px;
+  }
+  
+  .instructionsTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #009688;
+  }
+  
+  .instructionsText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #666;
+  }
+
+  .summaryTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #009688;
+  }
+  
+  .summaryText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .recipeDiets {
+    margin-bottom: 20px;
+  }
+  
+  .dietsTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #009688;
+  }
+  
+  .dietsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dietItem {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 10%
+  }
+  
+ 
+
+.backButton {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #009688; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: auto;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .backButton:hover {
+    background-color: #3bb6aa; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+  }
+  
+  

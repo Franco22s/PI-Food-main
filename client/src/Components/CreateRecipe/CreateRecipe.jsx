@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import style from './CreateRecipe.module.css';
 import validation from './validation';
-import { NavLink } from 'react-router-dom';
+import { NavLink,   } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postRecipe, getDiets } from '../../Redux/actions';
+import { postRecipe, getDiets,} from '../../Redux/actions';
+
 
 const CreateRecipe = () => {
   const dispatch = useDispatch();
   const diets = useSelector((state) => state.diets);
+
 
   const [recipeData, setRecipeData] = useState({
     name: '',
@@ -52,13 +54,13 @@ const CreateRecipe = () => {
       }
     });
   };
-  
 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validation(recipeData);
     setErrors(validationErrors);
-  
+
     if (Object.keys(validationErrors).length === 0) {
       try {
         dispatch(postRecipe(recipeData));
@@ -69,100 +71,117 @@ const CreateRecipe = () => {
       }
     }
   };
-  
-  
 
   return (
-  <div className={style.maxContainer}>
-    <div className={style.containerWrapper} >
-    <div className={style.CContainer}>
-      <h1>CREATE RECIPE...</h1>
-      <form className={style.formu} onSubmit={handleSubmit}>
-        <label className={style.labe} htmlFor="image">
-          <input className={style.inpa} 
-            type="text"
-            name="image"
-            id="image"
-            placeholder="add image"
-            value={recipeData.image}
-            onChange={handleChange}
-          />
-        </label>
-        {errors.image && <span className={style.error}>{errors.image}</span>}
+    <div className={style.maxContainer}>
+      <div className={style.containerWrapper}>
+        <div className={style.CContainer}>
+          <h1>CREATE RECIPE...</h1>
+          <form className={style.formu} onSubmit={handleSubmit}>
+            <div className={style.inputContainer}>
+              <label className={style.labe} htmlFor="image">
+                <input
+                  className={style.inpaIma}
+                  type="text"
+                  name="image"
+                  id="image"
+                  placeholder="add image"
+                  value={recipeData.image}
+                  onChange={handleChange}
+                />
+              </label>
+              {recipeData.image && (
+                <img
+                  className={style.imagePreview}
+                  src={recipeData.image}
+                  alt="Recipe Preview"
+                />
+              )}
+            </div>
+            {errors.image && <span className={style.error}>{errors.image}</span>}
 
-        <label className={style.labe} htmlFor="name">
-          <input className={style.inpa}
-            type="text"
-            name="name"
-            id="name"
-            placeholder="add name"
-            value={recipeData.name}
-            onChange={handleChange}
-          />
-        </label>
-        {errors.name && <span className={style.error}>{errors.name}</span>}
-
-        <label className={style.labe} htmlFor="summary">
-          <textarea className={style.inpa}
-            type="text"
-            name="summary"
-            id="summary"
-            placeholder="add summary"
-            value={recipeData.summary}
-            onChange={handleChange}
-          />
-        </label>
-        {errors.summary && <span className={style.error}>{errors.summary}</span>}
-
-        <label className={style.labe} htmlFor="healthScore">
-          <input className={style.inpaNum}
-            type="number"
-            name="healthScore"
-            id="healthScore"
-            placeholder="add health Score"
-            value={recipeData.healthScore}
-            onChange={handleChange}
-          />
-        </label>
-        {errors.healthScore && <span className={style.error}>{errors.healthScore}</span>}
-
-        <label className={style.labe} htmlFor="analyzedInstructions">
-          <textarea className={style.inpa}
-            type="text"
-            name="analyzedInstructions"
-            id="analyzedInstructions"
-            placeholder="add analyzed Instructions"
-            value={recipeData.analyzedInstructions}
-            onChange={handleChange}
-          />
-        </label>
-        {errors.analyzedInstructions && <span className={style.error}>{errors.analyzedInstructions}</span>}
-
-        <label className={style.labe} htmlFor="diets">
-          <span>Select diets:</span>
-          {diets.map((diet) => (
-            <label key={diet.diets}>
-              <input className={style.inpa}
-                type="checkbox"
-                name="diets"
-                value={diet.diets}
-                checked={recipeData.diets.includes(diet.diets)}
-                onChange={handleCheckboxChange}
+            <label className={style.labe} htmlFor="name">
+              <input
+                className={style.inpa}
+                type="text"
+                name="name"
+                id="name"
+                placeholder="add name"
+                value={recipeData.name}
+                onChange={handleChange}
               />
-              {diet.name}
             </label>
-          ))}
-        </label>
-        {errors.diets && <span className={style.error}>{errors.diets}</span>}
+            {errors.name && <span className={style.error}>{errors.name}</span>}
 
-        <button className={style.greenButton} type="submit">Save</button>
-      </form>
-      <NavLink to={`/home`}>
-        <button className={style.redButton} >Back to home</button>
-      </NavLink>
+            <label className={style.labe} htmlFor="summary">
+              <textarea
+                className={style.inpa}
+                type="text"
+                name="summary"
+                id="summary"
+                placeholder="add summary"
+                value={recipeData.summary}
+                onChange={handleChange}
+              />
+            </label>
+            {errors.summary && <span className={style.error}>{errors.summary}</span>}
+
+            <label className={style.labe} htmlFor="healthScore">
+              <input
+                className={style.inpaNum}
+                type="number"
+                name="healthScore"
+                id="healthScore"
+                placeholder="add health Score"
+                value={recipeData.healthScore}
+                onChange={handleChange}
+              />
+            </label>
+            {errors.healthScore && <span className={style.error}>{errors.healthScore}</span>}
+
+            <label className={style.labe} htmlFor="analyzedInstructions">
+              <textarea
+                className={style.inpa}
+                type="text"
+                name="analyzedInstructions"
+                id="analyzedInstructions"
+                placeholder="add Instructions"
+                value={recipeData.analyzedInstructions}
+                onChange={handleChange}
+              />
+            </label>
+            {errors.analyzedInstructions && (
+              <span className={style.error}>{errors.analyzedInstructions}</span>
+            )}
+
+            <label className={style.labe} htmlFor="diets">
+              <span>Select diets:</span>
+              {diets.map((diet) => (
+                <label key={diet.diets}>
+                  <input
+                    className={style.inpa}
+                    type="checkbox"
+                    name="diets"
+                    value={diet.diets}
+                    checked={recipeData.diets.includes(diet.diets)}
+                    onChange={handleCheckboxChange}
+                  />
+                  {diet.name}
+                </label>
+              ))}
+            </label>
+            {errors.diets && <span className={style.error}>{errors.diets}</span>}
+
+            <button className={style.greenButton} type="submit">
+              Save
+            </button>
+          </form>
+          <NavLink to={`/home`}>
+            <button className={style.redButton}>Back to home</button>
+          </NavLink>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>    
   );
 };
 

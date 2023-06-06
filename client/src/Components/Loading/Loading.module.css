@@ -1,0 +1,22 @@
+.loadContainer {
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+    margin-top: 220px;
+  }
+  
+  .loadingBackground {
+    position: absolute;
+    width: 30%;
+    height: 0%;
+  }
+  
+  .load {
+    width: 200px; 
+    height: auto; 
+  }
+  
