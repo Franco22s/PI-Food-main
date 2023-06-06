@@ -28,10 +28,10 @@ const Lateral = () => {
     dispatch(actions.filterByOrigin(selectedOption));
   };
 
-  const diets = useSelector((state) => state.diets); // Obtener las dietas del estado Redux
+  const diets = useSelector((state) => state.diets); 
 
   useEffect(() => {
-    setDietOptions(diets.map((diet) => diet.name)); // Extraer solo los nombres de las dietas
+    setDietOptions(diets.map((diet) => diet.name)); 
   }, [diets]);
 
   return (
@@ -41,6 +41,7 @@ const Lateral = () => {
           <li>
             <h2>Filter by Origin</h2>
             <select name="Filter by Origin" id="FilterByOrigin" onChange={filterByOrigin}>
+            <option value="">All recipes</option>
               <option value="DataBase">DataBase</option>
               <option value="Api">Api</option>
             </select>
@@ -48,6 +49,7 @@ const Lateral = () => {
           <li>
             <h2>Order by Name</h2>
             <select name="Order by Name" id="OrderByName" onChange={handleOrderByName}>
+              <option value="">click here</option>
               <option value="A-Z">A-Z</option>
               <option value="Z-A">Z-A</option>
             </select>
@@ -55,6 +57,7 @@ const Lateral = () => {
           <li>
             <h2>Order by Health Score</h2>
             <select name="Order by Health Score" id="OrderByHealthScore" onChange={handleOrderByHealthScore}>
+              <option value="">click here</option>
               <option value="Ascending">Ascending</option>
               <option value="Descending">Descending</option>
             </select>

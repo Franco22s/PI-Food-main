@@ -16,7 +16,7 @@ const reducer = (state= initialState, {type, payload}) => {
             return {
                 ...state,
                 recipes:payload,
-                filteredRecipes:payload
+                filteredRecipes:payload,
             };
 
         case GET_DIETS:

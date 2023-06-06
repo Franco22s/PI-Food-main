@@ -1,0 +1,9 @@
+.selectContainer{
+    /* background-color: rgba(190, 189, 174, 0.911); */
+    background-color: rgba(143, 12, 38, 0.952);
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 6px;
+    border: 2px solid rgb(168, 168, 150);
+    border-radius: 10px;
+}

@@ -1,6 +1,6 @@
 require('dotenv').config();
 const {YOUR_API_KEY} = process.env;
-const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=90`;
+const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=63`;
 const axios = require('axios');
 const {Recipe, Diet} = require('../db')
 
@@ -44,7 +44,7 @@ try {
       healthScore: recipe.healthScore,
       image: recipe.image,
       analyzedInstructions: recipe.analyzedInstructions,
-      diets: recipe.diets?.map((diet) => diet.name).join(', '),
+      diets: recipe.diets?.map((diet) => diet.name)/*.join(', ')*/,
     };
   });
 

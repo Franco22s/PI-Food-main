@@ -8,6 +8,7 @@
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   }
   
 .head { grid-area: 1 / 1 / 2 / 9; }
@@ -16,19 +17,4 @@
 
 .body { grid-area: 2 / 2 / 13 / 9; }
 
-
-
-.head {
-  background-color: aqua;
-}
-
-.lateral {
-  background-color: red;
-}
-
-
-
-/* .body {
-  background-color: violet;
-} */
 

@@ -1,76 +1,104 @@
-
-
 .bigContainer {
-    display: grid;
-    grid-template-columns: 10px repeat(2, 1fr) 10px;
-    grid-template-rows: 10px 1fr 10px;
-    grid-column-gap: 3px;
-    grid-row-gap: 0px;
-    height: 15rem;
-    width: 30rem;
-    margin: 30px;
-    margin-right: 20px;
-  }
-
-    .body { grid-area: 1 / 1 / 4 / 5; }
-    .img { grid-area: 2 / 2 / 3 / 3; }
-    .specs { grid-area: 2 / 3 / 3 / 4; }
-
-
-
-
-.body{
-    background-color: orangered;
-    border-radius: 5%;
-    border: 5px solid orangered;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  display: grid;
+  grid-template-columns: 10px repeat(2, 1fr) 10px;
+  grid-template-rows: 10px 1fr 10px;
+  grid-column-gap: 3px;
+  grid-row-gap: 0px;
+  height: 15rem;
+  width: 30rem;
+  margin: 25px;
+  margin-right: 20px;
 }
 
+.body {
+  grid-area: 1 / 1 / 4 / 5;
+}
+
+.img {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.specs {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.body {
+  background-color: rgba(163, 163, 149, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.8px solid darkolivegreen;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.body:hover {
+  transform: scale(1.05);
+}
 
 .img {
   overflow: hidden;
   position: relative;
+  margin-right: 8px;
+  border-radius: 15%;
 }
 
 .img:hover .imagenes {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .imagenes {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
   transform-origin: center center;
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 10px;
+  cursor: pointer;
 }
-
-
-
-
-
-
-
 
 .specs {
-    color: azure;
-    width: 100%;
-    height: 100%;
-    background-color: brown;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  color: rgb(206, 240, 212);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(51, 121, 49);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.hdos{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    font-size: small;
+.specs:hover {
+  transform: scale(1.05);
+}
+
+.hdos {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-weight:500; 
+  font-family: cursive;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+
+.specs h2 {
+  margin: 10px 0;
+  text-align: center;
 }

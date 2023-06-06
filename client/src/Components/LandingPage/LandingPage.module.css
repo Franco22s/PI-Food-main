@@ -1,30 +1,70 @@
-.background{
-    background-color: aqua;
-    height: 100vh;
-    width: 100vw; 
-    background-image: url('https://img.freepik.com/foto-gratis/tabla-picar-rodeada-verduras-huevos-granos-arroz-escritorio_23-2148062361.jpg?w=1380&t=st=1685313578~exp=1685314178~hmac=f929438137d83fbc5cc61f126189540dc9177996a83c4801a971c82b547af704');
-    background-size: cover;
+.background {
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
-.welcome{
-    margin: 0;
-    padding: 0;
-    font-size: 50px;
-    
- 
+.image-container {
+  background-image: url('../../assets/tabla-picar-rodeada-verduras-huevos-granos-arroz-escritorio_23-2148062361-_1_-transformed.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
 }
 
-.cuadro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    height: 100vh; 
-  }
+.welcome {
+  font-size: 50px;
+}
+
+.home {
+  background-color: rgb(2, 82, 22);
+  height: 3rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color:burlywood;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home:hover {
+  background-color: darkred;
+}
 
 
-  .home{
-    background-color:red;
-  }
-  
+.letras {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: darkred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.letras h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.letras h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.letras .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

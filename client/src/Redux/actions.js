@@ -37,15 +37,15 @@ export function getDiets(){
 export function getRecipesDetails(id){
     return async function(dispatch) {
         try {
-            const { data } = await axios.get(`http://localhost:3001/recipes/${id}`);
-            if(!data.length) throw new Error("No se encontraron los detalles");
+            const response = await axios.get(`http://localhost:3001/recipes/${id}`);
+            const details = response.data
 
             return dispatch({
                 type: GET_DETAIL_RECIPES,
-                payload: data,
+                payload: details,
             });
         } catch (error) {
-            console.log(error.message);
+            console.log('No se encontraron los detalles', error);
         };
     };
 };

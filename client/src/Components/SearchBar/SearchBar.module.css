@@ -1,0 +1,109 @@
+.universal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: rgba(143, 12, 38, 0.952);
+  
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.heade {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.homeBut {
+  margin-left: 10px; 
+  padding-top: 10px;
+  
+}
+
+.createBut {
+  margin-right: 25px; 
+  padding-top: 10px;
+}
+
+.searchInput {
+    width: 500px;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: beige;
+    border: 1px solid black;
+    
+  }
+  
+  
+  .boton {
+   
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    font-family: monospace;
+  }
+  
+  .boton:hover {
+    background-color: darkgreen;
+  }
+  
+  
+.create {
+  font-size: 14px; 
+  border: none;
+  border-radius: 5px;
+  background-color: beige; 
+  color: rgb(19, 153, 19);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 6px 12px; 
+  text-transform: uppercase;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  font-family: monospace;
+  font-weight: 990;
+}
+
+.create:hover {
+  background-color: rgb(226, 218, 218); 
+}
+ 
+  .searchButton {
+    margin-left: 10px;
+    margin-right: 10px ;
+  }
+  
+  .recipes {
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+    padding: 7px 15px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    font-family: monospace;
+   
+  }
+  
+  .recipes:hover {
+    background-color: #006400;
+  }
+  

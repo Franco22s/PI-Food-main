@@ -11,8 +11,8 @@ const dietsString = diets.join(", ");
         <div className={style.bigContainer}>
             <div className={style.body}></div>
             <div className={style.img}>
-            <NavLink to = '/'>
-                <img className={style.imagenes}e src={image} alt={name}/>
+            <NavLink to = {`/detail/${id}`}>
+                <img className={style.imagenes} src={image} alt={name} title="Go to details"/>
             </NavLink>
             </div>
             <div className={style.specs}>
