@@ -44,7 +44,7 @@ try {
       healthScore: recipe.healthScore,
       image: recipe.image,
       analyzedInstructions: recipe.analyzedInstructions,
-      diets: recipe.diets?.map((diet) => diet.name)/*.join(', ')*/,
+      diets: recipe.diets?.map((diet) => diet.name)
     };
   });
 

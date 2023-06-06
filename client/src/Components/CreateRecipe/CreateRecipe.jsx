@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import style from './CreateRecipe.module.css';
 import validation from './validation';
-import { NavLink,   } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postRecipe, getDiets,} from '../../Redux/actions';
+import { postRecipe, getDiets } from '../../Redux/actions';
 
 
 const CreateRecipe = () => {

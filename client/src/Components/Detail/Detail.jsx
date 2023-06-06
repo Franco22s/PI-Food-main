@@ -76,7 +76,7 @@ const Detail = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;
