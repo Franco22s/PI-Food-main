@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
+
 const Detail = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
@@ -31,9 +32,12 @@ const Detail = () => {
   }
 
   return (
+  <div className={style.super}>
     <div className={style.detailContainer}>
       {loading ? (
-        <div>Loading...</div>
+        <div>
+          <h1>Loading...</h1>
+          </div>
       ) : (
         <>
           <div className={style.leftSection}>
@@ -41,18 +45,23 @@ const Detail = () => {
               {recipe.id && <h4 className={style.recipeDetail}>ID: {recipe.id}</h4>}
               {recipe.name && <h2 className={style.recipeTitle}>{recipe.name}</h2>}
               {recipe.healthScore && <h4 className={style.recipeDetail}>Health Score: {recipe.healthScore}</h4>}
+            <div className={style.containerSummary}> 
               {recipe.summary && (
                 <div className={style.recipesummary}>
                   <h4 className={style.summaryTitle}>Summary:</h4>
                   <p className={style.summaryText}>{stripHtmlTags(recipe.summary)}</p>
                 </div>
               )}
+            </div>
+            <div className={style.containerInstructions}>
               {recipe.analyzedInstructions && (
                 <div className={style.recipeInstructions}>
                   <h4 className={style.instructionsTitle}>Instructions:</h4>
                   <p className={style.instructionsText}>{recipe.analyzedInstructions}</p>
                 </div>
               )}
+            </div>
+            <div className={style.containerDiets}> 
               {recipe.diets && (
                 <div className={style.recipeDiets}>
                   <h4 className={style.dietsTitle}>Diets:</h4>
@@ -60,9 +69,11 @@ const Detail = () => {
                     {recipe.diets.map((diet, index) => (
                       <li key={index} className={style.dietItem}>{diet}</li>
                     ))}
+                      
                   </ul>
                 </div>
               )}
+            </div>    
             </div>
           </div>
           <div className={style.rightSection}>
@@ -76,6 +87,7 @@ const Detail = () => {
         </>
       )}
     </div>
+  </div>    
   );
 };
 

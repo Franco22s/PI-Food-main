@@ -24,7 +24,7 @@
 }
 
 .home {
-  background-color: rgb(2, 82, 22);
+  background-color: #2d6437;
   height: 3rem;
   width: 5rem;
   border: none;
@@ -37,13 +37,13 @@
 }
 
 .home:hover {
-  background-color: darkred;
+  background-color: #8d1010;
 }
 
 
 .letras {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: darkred;
+  color:  #8d1010;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -16,7 +16,7 @@
   font-size: 14px;
   border: none;
   border-radius: 5px;
-  background-color: #005800;
+  background-color: #507B58;
   color: white;
   cursor: pointer;
   padding: 4px 12px;
@@ -27,19 +27,19 @@
 }
 
 .lis button:hover {
-  background-color: #004500;
+  background-color: #005500;
 }
 
 .lis button:first-of-type,
 .lis button:last-of-type {
-  background-color: green;
+  background-color: #507B58;
 }
 
 .lis button:first-of-type:hover,
 .lis button:last-of-type:hover {
-  background-color: #286428;
+  background-color: #3d5f44;
 }
 
 .lis button.activePage {
-  background-color: #235a23;
+  background-color: #2d4732;
 }

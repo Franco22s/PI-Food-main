@@ -1,6 +1,6 @@
 require('dotenv').config();
 const {YOUR_API_KEY} = process.env;
-const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=63`;
+const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=90`;
 const axios = require('axios');
 const {Recipe, Diet} = require('../db')
 

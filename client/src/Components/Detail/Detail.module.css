@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+.super{
+  background-image: url('../../assets/b28c9bc1-e84d-4c16-afc6-468e787c6de8.jpg');
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+}
+ 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:  rgb(244, 242, 228)
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(244, 242, 228);
+  border-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8a8585;
+}
+
+
+
 .detailContainer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: rgb(236, 236, 205);
     min-height: 100vh;
+    
   }
   
   .leftSection {
@@ -16,7 +42,6 @@
     align-items: flex-start;
     padding: 10px;
     max-width: 50%; 
-    background-color: rgb(236, 236, 205);
     height: 100%;
   }
   
@@ -24,7 +49,7 @@
   .imageContainer {
     width: 550px;
     height: 550px;
-    border-radius: 8px;
+    border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
     margin-bottom: 20px;
@@ -56,6 +81,7 @@
   .recipeDetail {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    font-weight:9000;
     margin-bottom: 5px;
     color: #666;
   }
@@ -76,13 +102,36 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #009688;
+    color: #507B58;
   }
   
   .instructionsText {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #666;
+    font-weight: bold;
+  }
+
+  .containerSummary{
+    background-color: rgba(244, 242, 228, 0.603);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 3%;
+  }
+
+  .containerInstructions{
+    background-color: rgba(244, 242, 228, 0.603);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 3%;
+  }
+
+  .containerDiets{
+    background-color: rgba(244, 242, 228, 0.603);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 3%;
+    background-size: cover;
   }
 
   .summaryTitle {
@@ -90,13 +139,14 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #009688;
+    color: #507B58;
   }
   
   .summaryText {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #666;
+    font-weight: bold;
   }
   
   .recipeDiets {
@@ -108,10 +158,11 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #009688;
+    color: #507B58;
   }
   
   .dietsList {
+    font-family: 'Roboto', sans-serif;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -121,7 +172,8 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-bottom: 5px;
-    color: #333;
+    color: #666;
+    font-weight: bold;  
   }
   
   .rightSection {
@@ -140,10 +192,10 @@
     font-family: 'Roboto', sans-serif;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #009688; 
+    background-color: #507B58; 
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     margin-top: auto;
@@ -153,8 +205,10 @@
   }
   
   .backButton:hover {
-    background-color: #3bb6aa; 
+    background-color: #6ba776; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
   }
   
-  
+  .detailContainer h1{
+    font-weight: 900;
+  }

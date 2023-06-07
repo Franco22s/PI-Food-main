@@ -29,12 +29,16 @@ const Pagination = () => {
   return (
     <nav>
       <ul className={style.uele}>
-        <li className={style.lis}>
-          <button onClick={() => handleClick(1)}>First</button>
-        </li>
-        <li className={style.lis}>
-          <button onClick={handlePrevious}>Previous</button>
-        </li>
+        {currentPage > 1 && (
+          <li className={style.lis}>
+            <button onClick={() => handleClick(1)}>First</button>
+          </li>
+        )}
+        {currentPage > 1 && (
+          <li className={style.lis}>
+            <button onClick={handlePrevious}>Previous</button>
+          </li>
+        )}
         {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
           <li className={style.lis} key={page}>
             <button
@@ -45,12 +49,16 @@ const Pagination = () => {
             </button>
           </li>
         ))}
-        <li className={style.lis}>
-          <button onClick={handleNext}>Next</button>
-        </li>
-        <li className={style.lis}>
-          <button onClick={() => handleClick(totalPages)}>Last</button>
-        </li>
+        {currentPage < totalPages && (
+          <li className={style.lis}>
+            <button onClick={handleNext}>Next</button>
+          </li>
+        )}
+        {currentPage < totalPages && (
+          <li className={style.lis}>
+            <button onClick={() => handleClick(totalPages)}>Last</button>
+          </li>
+        )}
       </ul>
     </nav>
   );

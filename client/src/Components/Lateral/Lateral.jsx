@@ -46,6 +46,7 @@ const Lateral = () => {
               <option value="Api">Api</option>
             </select>
           </li>
+          <br />
           <li className={style.filterItem}>
             <h2 className={style.filterTitle}>Order by Name</h2>
             <select className={style.filterSelect} name="Order by Name" id="OrderByName" onChange={handleOrderByName}>
@@ -54,6 +55,7 @@ const Lateral = () => {
               <option value="Z-A">Z-A</option>
             </select>
           </li>
+          <br />
           <li className={style.filterItem}>
             <h2 className={style.filterTitle}>Order by Health Score</h2>
             <select className={style.filterSelect} name="Order by Health Score" id="OrderByHealthScore" onChange={handleOrderByHealthScore}>
@@ -62,6 +64,7 @@ const Lateral = () => {
               <option value="Descending">Descending</option>
             </select>
           </li>
+          <br />
           <li className={style.filterItem}>
             <h2 className={style.filterTitle}>Filter by Diets</h2>
             <select className={style.filterSelect} name="Filter by Diets" id="FilterByDiets" onChange={filterByDiets}>
